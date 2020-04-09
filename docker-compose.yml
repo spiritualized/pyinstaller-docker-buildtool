@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  smarthash-linux:
+    image: smarthash-linux
+    hostname: smarthash-linux
+    container_name: smarthash-linux
+    build:
+      context: .
+    volumes:
+      - ./code:/code
+      - ./releases:/releases
+    ports:
+      - 22:22
